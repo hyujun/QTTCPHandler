@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(test2 LANGUAGES CXX)
+project(QTTCPHandler LANGUAGES CXX)
 
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
@@ -28,20 +28,26 @@ set(CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/modules)
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 if(ANDROID)
-  add_library(test2 SHARED
-    main.cpp
-    mainwindow.cpp
-    mainwindow.h
-    mainwindow.ui
-  )
-else()
-  add_executable(test2
+  add_library(QTTCPHandler SHARED
     main.cpp
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
     worker.cpp
     worker.h
+    tcpclienthandler.h
+    tcpclienthandler.cpp
+  )
+else()
+  add_executable(QTTCPHandler
+    main.cpp
+    mainwindow.cpp
+    mainwindow.h
+    mainwindow.ui
+    worker.cpp
+    worker.h
+    tcpclienthandler.h
+    tcpclienthandler.cpp
   )
 endif()
 

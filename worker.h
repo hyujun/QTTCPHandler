@@ -52,8 +52,8 @@ using Poco::Thread;
 using Poco::Stopwatch;
 using namespace std;
 
-const std::string hostname = "192.168.0.20"; //STEP2 IP Address Monkey
-const Poco::UInt16 PORT = 9911;
+const std::string hostname = "192.168.0.117"; //STEP2 IP Address Monkey
+const Poco::UInt16 PORT = 32452;
 
 enum {
     SIZE_HEADER = 52,
